@@ -12,13 +12,14 @@ get '/' do
 end
 
 get '/reset' do
-   # Reset the messages
+   Message.destroy_all
   "Messages reset!"
 end
 
 post '/' do
   Message.create!(params)
 end
+
 
 class Message < ActiveRecord::Base
 
