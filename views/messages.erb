@@ -5,7 +5,14 @@
   </head>
   <body>
     <div>
-
+      <% @messages.each do |message| %>
+      <h2> "Message <%= message.id%></h2>
+        <ul>
+           <li>From: <%= message.sender %></li>
+           <li>To: <%= message.receiver %></li>
+           <li> Message: <%= message.content %></li>
+        </ul>
+      <% end %>
     </div>
     <a href="/reset"><b>DELETE ALL MESSAGES</b></a>
   </body>

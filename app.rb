@@ -17,8 +17,7 @@ get '/reset' do
 end
 
 post '/' do
-  # TODO: Read the message contents, save to the database
-
+  Message.create!(params)
 end
 
 class Message < ActiveRecord::Base
